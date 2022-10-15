@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\AdvertisementController;
+use App\Http\Controllers\CommentController;
+use App\Http\Controllers\CommunityController;
 use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 
@@ -18,3 +21,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/post',[PostController::class, 'index']);
+Route::get('/advertise',[AdvertisementController::class, 'index']);
+Route::get('/comment',[CommentController::class, 'index']);
+Route::get('/community',[CommunityController::class, 'index']);
+
