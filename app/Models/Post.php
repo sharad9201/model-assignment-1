@@ -14,4 +14,6 @@ class Post extends Model
         'status',
         'description',
     ];
+
+    protected $table = 'posts';
 }
