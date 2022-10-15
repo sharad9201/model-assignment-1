@@ -14,9 +14,9 @@ return new class extends Migration
     public function up()
     {
         Schema::table('posts', function (Blueprint $table) {
-            $table->string('position')->nullable()->change();
-            $table->string('status')->change();
-            $table->string('description')->nullable()->change();
+            //
+            $table->foreignId('user_id')->constrained()->references('id')->on('users');;
+
         });
     }
 
@@ -27,7 +27,8 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('update_for_posts');
-
+        Schema::table('posts', function (Blueprint $table) {
+            //
+        });
     }
 };
