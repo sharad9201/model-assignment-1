@@ -5,6 +5,7 @@ namespace Database\Seeders;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 use App\Models\Advertisement;
+use App\Models\Category;
 use App\Models\Comment;
 use App\Models\Community;
 use App\Models\Post;
@@ -27,15 +28,17 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
 
-        $user= User::factory()->count(4)->create();
+        $user= User::factory()->count(1)->create();
 
-        $post= Post::factory()->count(4)->create();
+        $post= Post::factory()->count(3)->create();
 
         $comment= Comment::factory()->count(4)->create();
 
         $community= Community::factory()->count(4)->create();
 
         $advertisement= Advertisement::factory()->count(2)->create();
+
+        $category= Category::factory()->count(2)->create();
 
 
 
