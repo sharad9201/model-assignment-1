@@ -1,5 +1,4 @@
-@extends('welcome')
-@section('community')
+
 <div class="modal-dialog modal-dialog-scrollable">
                 <table border="1px">
                     <tr > 
@@ -19,4 +18,4 @@
                     @endforeach
                 </table>
             </div>
-@endsection
+

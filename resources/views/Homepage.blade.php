@@ -1,42 +1,41 @@
-@extends('welcome')
-@section('content')
-<div> Home Page</div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-    Post
-</button>
-<!-- <a href="{{ route('post') }}" class="text-sm text-gray-700 underline">Post</a> -->
+<!DOCTYPE html>
+<html lang="en">
 
-<!-- <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h1 class="modal-title fs-5" id="staticBackdropLabel">Post</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-dialog modal-dialog-scrollable">
-                <table border="1px">
-                    <tr>
-                        <th>Postion</th>
-                        <th>Status</th>
-                        <th>Description</th>
-                        <!-- <th>Posted By</th> -->
-                    </tr>
-                    @foreach ($posts as $post)
-                    <tr>
-                        <td>{{$post['postion']}}</td>
-                        <td>{{$post['status']}}</td>
-                        <td>{{$post['description']}}</td>
-                        <!-- <td>{{$post->user['name']}}</td> -->
-                    </tr>
-                    @endforeach
-                </table>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Understood</button>
-            </div>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <h1> Home Page</h1>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+
+    <div class="card" style="width: 100%;">
+        <div class="d-flex justify-content-evenly">
+            <!-- <h2 class="card-title">{{$homepages->position}}</h5>
+            <h5 class="card-title">{{$homepages->description}}</h5> -->
+            <a href="{{route('post.position')}}" class="btn btn-primary">Posts</a>
+
+            <a href="{{route('community.name')}}" class="btn btn-primary">Community</a>
+            <a href="{{route('advertisement.topics')}}" class="btn btn-primary">Asvertiisement</a>
+            <
+            <a href="{{route('comment.comment_text')}}" class="btn btn-primary">Comments</a>
+            <a href="{{route('category.business')}}" class="btn btn-primary">Category</a>
+
+
+            
+
         </div>
+
+
     </div>
-</div> -->
-@endsection
+</body>
+
+</html>
