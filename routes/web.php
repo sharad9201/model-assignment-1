@@ -25,3 +25,4 @@ Route::get('/advertise',[AdvertisementController::class, 'index']);
 Route::get('/comment',[CommentController::class, 'index']);
 Route::get('/community',[CommunityController::class, 'index']);
 
+

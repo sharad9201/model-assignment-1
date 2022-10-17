@@ -9,8 +9,9 @@ class CommunityController extends Controller
 {
     //
     function index(){
-
-        $community = Community::all();
-        return $community;
+        
+        $communities = Community::with('post')->get();
+        
+        return view('community',['communities'=>$communities]);
     }
 }

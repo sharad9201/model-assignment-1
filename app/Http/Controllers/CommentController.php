@@ -9,8 +9,8 @@ class CommentController extends Controller
 {
     //
     function index(){
-
-        $comment = Comment::all();
-        return $comment;
+        $comments = Comment::with('user','post')->get();
+        
+        return view('comment',['comments'=>$comments]);
     }
 }

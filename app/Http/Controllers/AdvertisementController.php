@@ -10,7 +10,8 @@ class AdvertisementController extends Controller
     //
     function index(){
 
-        $advertise = Advertisement::all();
-        return $advertise;
+        $advertisements = Advertisement::with('community')->get();
+        
+        return view('advertisement',['advertisements'=>$advertisements]);
     }
 }
